@@ -32,6 +32,7 @@ public class searchfrag extends Fragment {
     public RecyclerView.Adapter adapter;
     private List<itemrest> listitem;
     databasehandler mydb;
+    String str1;
 
 
     public searchfrag() {
@@ -47,6 +48,8 @@ public class searchfrag extends Fragment {
 
         View vv= inflater.inflate(R.layout.fragment_searchfrag, container, false);
         mydb=new databasehandler(getActivity());
+        String str2=getArguments().getString("numb");
+        str1=str2;
         atv=(AutoCompleteTextView)vv.findViewById(R.id.place);
         searching=(TextView) vv.findViewById(R.id.searching);
         recyclerView=(RecyclerView)vv.findViewById(R.id.recycler);
@@ -100,7 +103,7 @@ public class searchfrag extends Fragment {
 
             }
 
-            adapter=new adapter(listitem,getActivity());
+            adapter=new adapter(listitem,getActivity(),str1);
             recyclerView.setAdapter(adapter);
         }
 

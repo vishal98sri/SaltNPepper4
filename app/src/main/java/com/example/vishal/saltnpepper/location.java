@@ -13,12 +13,17 @@ public class location extends AppCompatActivity {
 
      private static final String[] place=new String[]{"nolambur","anna nagar west","mylapore","anna nagar east","mogappair east","mogappair west","padi","nungambakkam","besant nagar","adayar","avadi","mandavalli","purasaiwakkam","valasaravakkam","virungambakkam","vadapalani","velacheri","shenoy nagar","arumbakkam"};
     AutoCompleteTextView t;
+    String str2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_location);
          t=findViewById(R.id.place);
+
+        Bundle b = getIntent().getExtras();
+
+        str2 = b.getString("numb");
 
         ArrayAdapter<String> adapter=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,place);
 
@@ -55,6 +60,7 @@ public class location extends AppCompatActivity {
                  Intent i1=new Intent(this,delivloc.class);
                  Bundle bundle=new Bundle();
                  bundle.putString("location",input);
+                 bundle.putString("numb",str2);
                  i1.putExtras(bundle);
                  startActivity(i1);
              }

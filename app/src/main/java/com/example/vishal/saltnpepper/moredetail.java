@@ -14,7 +14,7 @@ public class moredetail extends AppCompatActivity {
 
     EditText t1,t2,t3;
     Button b;
-    String str2;
+    String str2,str1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +31,7 @@ public class moredetail extends AppCompatActivity {
 
         str2 = bb.getString("location");
 
+        str1=bb.getString("numb");
         t1.setText(str2);
         t1.setEnabled(false);
 
@@ -118,6 +119,7 @@ public class moredetail extends AppCompatActivity {
         Intent i=new Intent(this,dashboard.class);
         Bundle bundle=new Bundle();
         bundle.putString("location",str2);
+        bundle.putString("numb",str1);
         i.putExtras(bundle);
         startActivity(i);
 

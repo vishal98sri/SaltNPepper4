@@ -23,7 +23,7 @@ public class dashboard extends AppCompatActivity {
    private searchfrag sf;
    private cartfrag cf;
    private accfrag af;
-   String str2;
+   String str2,str1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,9 +35,11 @@ public class dashboard extends AppCompatActivity {
         Bundle bb = getIntent().getExtras();
 
         str2 = bb.getString("location");
+        str1=bb.getString("numb");
 
         Bundle newb=new Bundle();
         newb.putString("location",str2);
+        newb.putString("numb",str1);
 
         mTextMessage = (TextView) findViewById(R.id.message);
          navigation = (BottomNavigationView) findViewById(R.id.navigation);
@@ -46,7 +48,10 @@ public class dashboard extends AppCompatActivity {
          nf=new nearmefrag();
          nf.setArguments(newb);
 
+
          sf=new searchfrag();
+         sf.setArguments(newb);
+
          cf=new cartfrag();
          af=new accfrag();
 

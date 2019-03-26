@@ -10,7 +10,7 @@ import android.widget.Toast;
 public class delivloc extends AppCompatActivity {
 
     EditText loc;
-    String str2;
+    String str2,str1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +23,9 @@ public class delivloc extends AppCompatActivity {
 
       str2 = b.getString("location");
 
+
+        str1 = b.getString("numb");
+
         loc.setText(str2);
         loc.setEnabled(false);
 
@@ -34,9 +37,19 @@ public class delivloc extends AppCompatActivity {
         Intent i1=new Intent(this,moredetail.class);
         Bundle bundle=new Bundle();
         bundle.putString("location",str2);
+        bundle.putString("numb",str1);
         i1.putExtras(bundle);
         startActivity(i1);
     }
 
 
+    public void conf(View view) {
+
+        Intent i1=new Intent(this,dashboard.class);
+        Bundle bundle=new Bundle();
+        bundle.putString("location",str2);
+        bundle.putString("numb",str1);
+        i1.putExtras(bundle);
+        startActivity(i1);
+    }
 }

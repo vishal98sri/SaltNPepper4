@@ -14,6 +14,7 @@ public class loginaccess extends AppCompatActivity {
     private Button btncon;
     private EditText phone;
     private EditText passwd;
+    String str2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,7 +24,7 @@ public class loginaccess extends AppCompatActivity {
 
         Bundle b = getIntent().getExtras();
 
-        String str2 = b.getString("numb");
+         str2 = b.getString("numb");
 
         phone.setText(str2);
         phone.setEnabled(false);
@@ -72,6 +73,9 @@ public class loginaccess extends AppCompatActivity {
         if(passwd.getText().toString().equals("vishal11"))
         {
             Intent i=new Intent(this,location.class);
+            Bundle bundle=new Bundle();
+            bundle.putString("numb",str2);
+            i.putExtras(bundle);
             startActivity(i);
         }
     }

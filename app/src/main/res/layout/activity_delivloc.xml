@@ -53,6 +53,7 @@
         android:layout_alignTop="@+id/button"
         android:layout_toEndOf="@+id/textView16"
         android:background="@color/Orange"
-        android:text="CONFIRM LOCATION" />
+        android:text="CONFIRM LOCATION"
+        android:onClick="conf"/>
 
 </RelativeLayout>

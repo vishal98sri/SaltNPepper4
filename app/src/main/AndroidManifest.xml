@@ -39,7 +39,9 @@
         <activity
             android:name=".dashboard"
             android:label="@string/title_activity_dashboard" />
-        <activity android:name=".GPS"></activity>
+        <activity android:name=".GPS" />
+        <activity android:name=".Items" />
+        <activity android:name=".couponapp"></activity>
     </application>
 
 </manifest>

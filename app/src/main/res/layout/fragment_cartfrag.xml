@@ -8,9 +8,129 @@
 
     <!-- TODO: Update blank fragment layout -->
 
-    <ImageView
-        android:id="@+id/imageView2"
+
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="380dp"
-        android:src="@drawable/cartempty" />
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler3"
+            android:layout_width="match_parent"
+            android:layout_height="226dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/hotel"></android.support.v7.widget.RecyclerView>
+
+        <TextView
+            android:id="@+id/cartit"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="37dp"
+            android:text="                             CART  DETAILS"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/hotel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="98dp" />
+
+        <Button
+            android:id="@+id/pay"
+            android:layout_width="196dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:background="@color/Orange"
+            android:text="PROCEED TO PAY" />
+
+        <TextView
+            android:id="@+id/textView27"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="172dp"
+            android:layout_marginStart="43dp"
+            android:text="Bill Details"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView28"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/textView27"
+            android:layout_marginBottom="139dp"
+            android:text="Item Total" />
+
+        <TextView
+            android:id="@+id/amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/textView28"
+            android:layout_marginEnd="150dp"
+            android:text="0" />
+
+        <TextView
+            android:id="@+id/textView30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/textView27"
+            android:layout_marginBottom="111dp"
+            android:text="Offer Discount" />
+
+        <TextView
+            android:id="@+id/offeramt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/hotel"
+            android:layout_alignTop="@+id/textView30" />
+
+        <TextView
+            android:id="@+id/textView32"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/textView27"
+            android:layout_marginBottom="81dp"
+            android:text="To pay" />
+
+        <TextView
+            android:id="@+id/total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/pay"
+            android:layout_alignTop="@+id/textView32" />
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/recycler3"
+            android:layout_marginStart="20dp"
+            android:background="@color/Orange"
+            android:text="VIEW OFFER COUPONS" />
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="120dp"
+            android:layout_height="36dp"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/recycler3"
+            android:layout_marginEnd="31dp"
+            android:background="@color/Orange"
+            android:text="APPLY OFFERS"
+            />
+
+    </RelativeLayout>
+
 </FrameLayout>

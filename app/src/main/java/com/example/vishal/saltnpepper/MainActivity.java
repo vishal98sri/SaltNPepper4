@@ -46,6 +46,27 @@ public class MainActivity extends AppCompatActivity {
         mydb.insert("Rain Tree","23,Main road,adayar","chennai","600037","non veg","300 for two","4.4");
         mydb.insert("Adayar Anandha Bhavan","23,Main road,adayar","chennai","600037","pure veg","300 for two","4.4");
 
+
+        mydb.insertitems(1,"Plain Roast","South Indian","Rs. 60");
+        mydb.insertitems(1,"Ghee Roast","South Indian","Rs. 70");
+        mydb.insertitems(1,"Naan","North Indian","Rs. 40");
+        mydb.insertitems(1,"Tomato Roast","South Indian","Rs. 65");
+        mydb.insertitems(1,"Poori","South Indian","Rs. 65");
+        mydb.insertitems(1,"Panner Butter Masala","North Indian","Rs. 90");
+        mydb.insertitems(1,"Kadai Panner","North Indian","Rs. 100");
+
+        mydb.insertitems(2,"Kadai Panner","North Indian","Rs. 120");
+        mydb.insertitems(2,"Naan","North Indian","Rs. 50");
+        mydb.insertitems(2,"Tandoori chicken","Tandoori","Rs. 140");
+        mydb.insertitems(2,"Chettinad chicken","South Indian","Rs. 145");
+        mydb.insertitems(2,"Pongal","South Indian","Rs. 40");
+
+        mydb.insertitems(3,"Smoky grilled 8PC","Fast food","Rs. 265");
+        mydb.insertitems(3,"Triple Treat","Fast food","Rs. 643");
+        mydb.insertitems(3,"Burger","Fast food","Rs. 130");
+        mydb.insertitems(3,"French Fries","Fast food","Rs. 90");
+        mydb.insertitems(3,"Pepsi 500ml","Soft drink","Rs. 50");
+
         if(inserted)
             Toast.makeText(getApplicationContext(),"Inserted",Toast.LENGTH_SHORT).show();
 
@@ -91,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void getloc(View view) {
 
-         Intent i1=new Intent(this,location.class);
+         Intent i1=new Intent(this,login.class);
         startActivity(i1);
     }
 }

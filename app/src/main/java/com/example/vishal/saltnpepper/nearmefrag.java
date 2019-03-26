@@ -36,6 +36,9 @@ public class nearmefrag extends Fragment {
         // Inflate the layout for this fragment
 
         String strt=getArguments().getString("location");
+        String str2=getArguments().getString("numb");
+
+
         mydb=new databasehandler(getActivity());
         View vv= inflater.inflate(R.layout.fragment_nearmefrag, container, false);
 
@@ -63,7 +66,7 @@ public class nearmefrag extends Fragment {
 
             }
 
-            adapter=new adapter(listitem,getActivity());
+            adapter=new adapter(listitem,getActivity(),str2);
             recyclerView.setAdapter(adapter);
         }
 
